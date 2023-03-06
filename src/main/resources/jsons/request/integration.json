@@ -1,0 +1,30 @@
+{
+  "CLIENT_IP": "192.168.1.119",
+  "field102": "600981",
+  "field101": "UPDATE",
+  "field100": "INTEGRATED_PAYBILLS",
+  "field11": "209211",
+  "field56": "f02507d0-eb14-47f6-9718-e3de6877cc48",
+  "field12": "172727",
+  "field32": "ADMIN",
+  "field0": "0200",
+  "field37": "220720209211",
+  "field15": "0720",
+  "field49": "KES",
+  "field24": "BB",
+  "field13": "0720",
+  "THEIR_REF": "220720209211",
+  "field7": "0720172727",
+  "CorrelationID": "220720209211",
+  "field3": "180000",
+  "field2": "254727111111",
+  "REQUEST_HEADERS": {
+    "Accept": "*/*",
+    "Host": "192.168.1.92:8080",
+    "Content-Length": "524",
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  "field60": "KE",
+  "field61": "1",
+  "field4": "0"
+}

@@ -1,0 +1,49 @@
+esb-mdb process flow********
+
+
+1.servelet working currently
+
+
+
+log incoming request
+decode base64
+sanitize request remove(null n emptys the change to JSON)
+Validate channel(check if channel is allowed and IP)
+check license if expired
+generate unique transaction
+check whitelisting incase it pilot testing
+validate data sent based on transaction (polymophism)
+ -check if the service is active e.g(BI)
+ -check if customer/agent exists in our system && allow other transactions that dont require customer to exist eg( account opening /Group Loans) if its IPRS send request to IPRS and check
+ -check for duplicates
+ -convert the currency to the right currency( kafka is the best option from external api)
+ -add to the pending queue the transaction(kafka ksql is the best option to control this)
+ -log request to transactions DB
+ 
+ 
+Route request to respective classes we have three options based on ISO standards
+-RequestResponse ( Enquiries mostly --option use rest,rsockets or events)
+-FirenForget ( Transactions mostly --option events is the best option to check on rsockets) check on daily and transaction limit.
+-Streaming (metrics logs and statistics  --options events)
+
+
+Response
+Validate the response data
+update the transaction DB with response  ***requesttable,responsetable,errortable,transactionIDtable
+generate customer success/error messages on responses
+
+
+2.mdb working currently
+ log incoming request
+ validate request
+ set default request type
+ get GLs for specific services
+ send request to respective service
+ 
+ 
+ response
+ log incoming response
+ foward the response to a respective service.
+
+  ######## TODO:charges to be added on mdb and other system configurations
+	

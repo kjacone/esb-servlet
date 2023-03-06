@@ -1,0 +1,31 @@
+{
+    "namespace": "com.jkeya.workshop.mdbrequest.schema",
+    "doc": "MDB entity",
+    "type": "record",
+    "name": "MDB_REQUEST",
+    "fields": [
+      {
+        "name": "id",
+        "type": ["null", "string"],
+        "default": null
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "otherName",
+        "type": "string"
+      },
+      {
+        "name": "level",
+        "type": "int"
+      },
+      {
+        "name": "picture",
+        "type": ["null", "string"],
+        "default": null
+      }
+    ]
+  }
+  
